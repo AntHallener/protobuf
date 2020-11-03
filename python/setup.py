@@ -254,7 +254,7 @@ if __name__ == '__main__':
     os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'cpp'
 
   # Keep this list of dependencies in sync with tox.ini.
-  install_requires = ['six>=1.9', 'setuptools']
+  install_requires = ['six>=1.9']
   if sys.version_info <= (2,7):
     install_requires.append('ordereddict')
     install_requires.append('unittest2')
@@ -293,7 +293,6 @@ if __name__ == '__main__':
           'build_py': build_py,
           'test_conformance': test_conformance,
       },
-      setup_requires = ['wheel'],
       install_requires=install_requires,
       ext_modules=ext_module_list,
   )
